@@ -203,11 +203,11 @@ def test_failure_scenarios():
         print("Result: Could not find 'Lost Treasures'. This e-book is not listed in the catalog.\n")
 
     # Attempt to retrieve a non-existent customer
-    print("4. Searching for a customer with the email 'ali.khan@example.com'...")
-    customer = Customer("Ali Khan", "ali.khan@example.com")
+    print("4. Searching for a customer with the email 'ali@example.com'...")
+    customer = Customer("Ali", "ali@example.com")
     catalog_customers = []  # This would be part of a customer management system
     if not any(cust.get_contact_info() == customer.get_contact_info() for cust in catalog_customers):
-        print("Result: No match found. 'ali.khan@example.com' is not a registered customer.\n")
+        print("Result: No match found. 'ali@example.com' is not a registered customer.\n")
 
     # Attempt to create an order with an empty cart
     print("5. Creating an order for an empty shopping cart...")
